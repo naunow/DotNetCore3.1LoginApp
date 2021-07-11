@@ -1,0 +1,6 @@
+/.vs
+/LoginApp/.config
+/LoginApp/bin
+/LoginApp/obj
+/LoginApp/*.user
+/LoginApp/Properties/PublishProfiles/*.user

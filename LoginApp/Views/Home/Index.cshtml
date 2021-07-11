@@ -1,0 +1,20 @@
+﻿@model LoginApp.ViewModels.LoginInfo
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Login" asp-controller="Home" method="post">
+    @Html.ValidationSummary("", new { @Class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(x => Model.Login_Id)
+        @Html.EditorFor(x => Model.Login_Id, new { htmlAttributes = new { @Class = "form-control", placeholder = "Enter Login ID" } })
+        @Html.ValidationMessageFor(x => Model.Login_Id, "", new { @Class = "invalid-feedback" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => Model.Password)
+        @Html.EditorFor(x => Model.Password, new { htmlAttributes = new { @Class = "form-control", placeholder = "Enter Password" } })
+        @Html.ValidationMessageFor(x => Model.Password, "", new { @Class = "invalid-feedback" })
+    </div>
+
+    <button class="btn btn-info">Login</button>
+</form>
